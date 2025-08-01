@@ -8,7 +8,7 @@
 </head>
 <body>
   <header>
-    <nav class="navbar">
+    <!-- <nav class="navbar">
      
       <ul>
         <li><a href="#about">About</a></li>
@@ -18,15 +18,34 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact Me</a></li>
       </ul>
-    </nav>
+    </nav> -->
+    <!-- navbar -->
+<nav class="navbar">
+    <ul class="link-group">
+        <li class="link active"><a href="#home">home</a></li>
+        <li class="link"><a href="#about">about</a></li>
+        <li class="link"><a href="#education">Educational Background</a></li>
+        <li class="link"><a href="#interests">Interests</a></li>
+        <li class="link"><a href="#skills">Skills</a></li>
+        <li class="link"><a href="#projects">projects</a></li>
+        <li class="link"><a href="#contact">contact</a></li>
+    </ul>
+</nav>
+
     
-    <section class="introduction" id="introduction">
+    <!-- <section class="introduction" id="introduction">
       <h2 class="typing">Hello, I'm <span>Allan kinuthia mungai</span></h2>
       <p>A passionate fullstack software engineer</p>
-    </section>
+    </section> -->
   </header>
 
   <main>
+    <!-- home section -->
+
+<section class="home-section active" id="home">
+    <h1 class="hero-heading">hello, i am <br> Allan</h1>
+    <img src="./img/me.jpg" class="home-img" alt="">
+</section>
    
       <!-- about section -->
 <section class="about-section" id="about">
@@ -80,37 +99,37 @@ Currently, I’m a student at Karatina University, actively working on personal 
     <h1 class="heading">skills</h1>
     <div class="skills-container">
         <div class="skill-card">
-            <img src="img/html.png" class="skill-img" alt="">
+            <img src="./img/html.png" class="skill-img" alt="">
             <div class="skill-level">98%</div>
             <h1 class="skill-name">HTML</h1>
             <p class="skill-info">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur, delectus!</p>
         </div>
         <div class="skill-card">
-            <img src="img/html.png" class="skill-img" alt="">
+            <img src="./img/css.png" class="skill-img" alt="">
             <div class="skill-level">90%</div>
             <h1 class="skill-name">CSS</h1>
             <p class="skill-info">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur, delectus!</p>
         </div>
         <div class="skill-card">
-            <img src="img/html.png" class="skill-img" alt="">
+            <img src="./img/js.png" class="skill-img" alt="">
             <div class="skill-level">85%</div>
             <h1 class="skill-name">JAVASCRIPT</h1>
             <p class="skill-info">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur, delectus!</p>
         </div>
         <div class="skill-card">
-            <img src="img/html.png" class="skill-img" alt="">
+            <img src="./img/expressjs.png" class="skill-img" alt="">
             <div class="skill-level">95%</div>
             <h1 class="skill-name">EXPRESS</h1>
             <p class="skill-info">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur, delectus!</p>
         </div>
         <div class="skill-card">
-            <img src="img/html.png" class="skill-img" alt="">
+            <img src="./img/node.png" class="skill-img" alt="">
             <div class="skill-level">70%</div>
             <h1 class="skill-name">NODEJS</h1>
             <p class="skill-info">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur, delectus!</p>
         </div>
         <div class="skill-card">
-            <img src="img/html.png" class="skill-img" alt="">
+            <img src="./img/React.webp" class="skill-img" alt="">
             <div class="skill-level">50%</div>
             <h1 class="skill-name">REACTJS</h1>
             <p class="skill-info">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur, delectus!</p>
@@ -119,7 +138,7 @@ Currently, I’m a student at Karatina University, actively working on personal 
 </div>
     </section>
 
-     <section id="projects">
+     <!-- <section id="projects">
       <h2>Projects</h2>
       <div class="project-grid">
         <div class="project-card">
@@ -149,10 +168,57 @@ Currently, I’m a student at Karatina University, actively working on personal 
           
         </div>
       </div>
-    </section>
+    </section> -->
+    <!-- project section -->
+<section class="project-section" id="projects">
+    <h1 class="project-heading">Projects</h1>
+    <div class="project-container">
+        <div class="project-card">
+            <img src="https://as1.ftcdn.net/jpg/14/66/01/64/1000_F_1466016499_ZMVkK1lhR4tBCXu9LviSe5oFcWsQ4wEk.webp" class="project-img" alt="">
+            <div class="project-content">
+                <h1 class="project-title">taskManager</h1>
+                <p class="project-info">
+                    manage your tasks
+                </p>
+                <div class="project-btn-grp">
+                    <button class="project-btn github">github repo</button>
+                    <button class="project-btn live">see live</button>
+                </div>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="https://s3.ap-south-1.amazonaws.com/prod-easebuzz-static/static/base/assets_aug_2021/img/easebuzz/easebuzz-explainer/explainers-ecommerce/what-is-ecommerce/upi-credit-cards.png" class="project-img" alt="">
+            <div class="project-content">
+                <h1 class="project-title">E-commerce</h1>
+                <p class="project-info">
+                    shop at comfortable of your home
+                </p>
+                <div class="project-btn-grp">
+                    <button class="project-btn github">github repo</button>
+                    <button class="project-btn live">see live</button>
+                </div>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="https://christinejohnbooks.com/wp-content/uploads/2023/07/Online-Bookstore-laptop.jpg"  alt="online bookStore" class="project-img" alt="">
+            <div class="project-content">
+                <h1 class="project-title">Bookstore</h1>
+                <p class="project-info">
+                    read online
+                </p>
+                <div class="project-btn-grp">
+                    <button class="project-btn github">github repo</button>
+                    <button class="project-btn live">see live</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
 
     <!-- contact section -->
 <section class="contact-section" id="contact">
+   
     <form class="contact-form">
         <input type="text" name="name" id="name" autocomplete="off" placeholder="name">
         <input type="text" name="email" id="email" autocomplete="off" placeholder="email">
@@ -163,6 +229,7 @@ Currently, I’m a student at Karatina University, actively working on personal 
     <div class="map">
         <iframe src="https://maps.app.goo.gl/Jh3EBzpFQMiG3s32A" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
+</section>
   </main>
 
   <footer>
