@@ -84,13 +84,17 @@ body{
   white-space: nowrap;
   display: inline-block;
   font-size: 2.5rem;
-  border-right: none;              /* no cursor */
-  animation: typing 3s steps(25, end) forwards;
+  animation: typing 3s steps(25, end) infinite;
 }
 
+/* Typing animation only */
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
 }
 
 
@@ -176,7 +180,7 @@ body{
     border-radius: 10px;
     color: #fff;
     display: block;
-    margin: -80px 0;
+    margin: -50px 0;
     position: relative;
     background: #f00;
 }
@@ -265,7 +269,60 @@ body{
     font-weight: 300;
     margin-bottom: 20px;
 }
+/* Interests Section */
+.interests-section {
+  padding: 100px 20px;
+  background-color: #191919;
+}
 
+.interests-section .heading {
+  text-align: center;
+  font-size: 60px;
+  color: #fff;
+  text-transform: capitalize;
+  font-weight: 300;
+  margin-bottom: 60px;
+}
+
+.interests-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.interest-card {
+  background: #1e1e1e;
+  padding: 40px 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.interest-card i {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #4fa0ff;
+}
+
+.interest-card h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+
+.interest-card p {
+  font-size: 16px;
+  opacity: 0.7;
+  line-height: 1.6;
+}
+
+.interest-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
 
 
 /* skills */
@@ -362,102 +419,130 @@ body{
     color: #4fdfff;
 }
 
-/* project-section */
-
-.project-section{
+.project-section {
     width: 100%;
-    min-height: 100vh;
-    padding: 150px 100px 100px;
-    transition: 1s;
+    padding: 80px 20px;
+    background: #111;
 }
 
-.project-heading{
-    font-size: 100px;
-    background: #252525;
+.project-heading {
+    font-size: 60px;
     text-transform: capitalize;
     text-align: center;
-    margin-bottom: 50px;
-    color: #706e6e;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-stroke: 8px transparent;
+    margin-bottom: 60px;
+    color: #f0f0f0;
+    letter-spacing: 2px;
+    font-weight: 600;
 }
 
-.project-container{
+.project-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 100px;
+    grid-template-columns: 1fr;
+    gap: 40px;
 }
 
-.project-card{
-    height: 400px;
+.project-card {
     position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
 }
 
-.project-img{
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-img {
     width: 100%;
-    height: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    transition: filter 0.5s;
+}
+
+.project-card:hover .project-img {
+    filter: brightness(40%);
+}
+
+.project-content {
     position: absolute;
     top: 0;
     left: 0;
-    object-fit: cover;
-    transition: .5s;
-}
-
-.project-content{
-    position: relative;
-    padding: 40px;
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: #fff;
-    transition: .5s;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
     opacity: 0;
+    transition: opacity 0.5s;
 }
 
-.project-title{
-    font-size: 50px;
-    text-transform: capitalize;
-    text-align: center;
-    font-weight: 300;
+.project-card:hover .project-content {
+    opacity: 1;
 }
 
-.project-info{
-    margin: 40px;
-    font-size: 20px;
-    line-height: 30px;
-    text-align: center;
+.project-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
-.project-btn-grp{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
+.project-info {
+    font-size: 16px;
+    margin-bottom: 20px;
+    max-width: 90%;
 }
 
-.project-btn{
-    height: 40px;
-    text-transform: capitalize;
-    font-size: 18px;
+.project-btn-grp {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-btn {
+    padding: 10px 20px;
+    font-size: 16px;
     border: none;
-    background: #000;
-    color: #fff;
+    border-radius: 30px;
+    text-transform: capitalize;
     cursor: pointer;
+    transition: 0.3s;
 }
 
-.project-btn.live{
+.project-btn a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.project-btn.github {
+    background-color: #fff;
+    color: #000;
+}
+
+.project-btn.github:hover {
+    background-color: #ccc;
+}
+
+.project-btn.live {
     background: none;
     border: 2px solid #fff;
+    color: #fff;
 }
 
-.project-card:hover .project-img{
-    filter: blur(20px);
-}
-
-.project-card:hover .project-content{
-    opacity: 1;
+.project-btn.live:hover {
+    background-color: #fff;
+    color: #000;
 }
 
 
  
-/*contact-section */
 @import url('https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:400,700&display=swap');
 
 * {
@@ -468,7 +553,7 @@ body{
 
 .contact {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   position: relative;
   background: linear-gradient(to bottom right, rgba(0,0,0, 0.9), rgba(36,11,54, 0.8), rgba(195,20,50,0.9)), url("https://i.imgur.com/3vacZxN.jpg") center no-repeat;
   background-size: cover;
@@ -476,22 +561,25 @@ body{
 
 .contact-header {
   font-family: "Montserrat", sans-serif;
-  margin: 10rem 10rem 3rem 10rem;
+  margin: 8rem 10rem 3rem;
   text-align: center;
 }
 
 #co-title {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: #c31432;
   text-transform: uppercase;
   margin-bottom: 20px;
+  letter-spacing: 2px;
 }
 
 #co-text {
-  font-size: 3rem;
+  font-size: 3.5rem;
+  font-weight: 600;
   color: white;
   padding-bottom: 2rem;
+  line-height: 1.4;
 }
 
 .contact-content {
@@ -499,10 +587,11 @@ body{
   justify-content: space-between;
   align-self: center;
   line-height: 2;
-  height: auto;
-  width: 70%;
+  width: 80%;
   background-color: rgba(0,0,0,0.6);
   margin-bottom: 10rem;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .contact-form {
@@ -512,10 +601,9 @@ body{
 
 #form-title {
   color: #fff;
-  font-size: 0.6rem;
+  font-size: 1.1rem;
   text-transform: uppercase;
-  letter-spacing: 1.2px;
-  line-height: 1px;
+  letter-spacing: 2px;
   margin-left: 4rem;
   margin-bottom: 3rem;
 }
@@ -527,8 +615,8 @@ fieldset {
 .form-field {
   outline: none;
   width: 200%;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.09);
-    margin-bottom: .9rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 1.5rem;
 }
 
 #name, #email, #subject, #message {
@@ -537,9 +625,9 @@ fieldset {
   outline: none;
   background: transparent;
   border: none;
-  letter-spacing: 2px;
-  font-size: .6rem;
-  line-height: 2rem;
+  letter-spacing: 1.5px;
+  font-size: 1rem;
+  line-height: 2.2rem;
   padding-bottom: 0.7rem;
 }
 
@@ -547,16 +635,19 @@ textarea, #message {
   width: 100%;
   color: #fff;
   overflow: visible;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 #form-btn {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 3rem;
   border: none;
   color: white;
-  font-size: 0.6rem;
-  letter-spacing: 2.5px;
+  font-size: 1rem;
+  letter-spacing: 2px;
   font-weight: 700;
   text-transform: uppercase;
   width: 200%;
@@ -564,11 +655,12 @@ textarea, #message {
   background-color: #c31432;
   cursor: pointer;
   transition: all .3s ease;
+  border-radius: 5px;
 }
 
 #form-btn:hover {
   opacity: 0.9;
-  transform: translateY(-2.5%);
+  transform: translateY(-2px);
   box-shadow: 0 0 15px 0 #000;
 }
 
@@ -583,119 +675,41 @@ textarea, #message {
 
 .contact-info h3 {
   font-family: "Montserrat", sans-serif;
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: #c31432;
+  margin-bottom: 10px;
 }
 
 .contact-info a {
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
-  color: #666;
-  font-size: 0.8rem;
-  letter-spacing: 2px;
-  line-height: 3rem;
-  margin-bottom: 5rem;
+  color: #ccc;
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+  line-height: 2.8rem;
+  margin-bottom: 2rem;
   transition: all .3s ease;
 }
 
 .contact-info a:hover {
   transform: translateY(-2.5%);
-  color: #999;
+  color: #fff;
 }
 
 .contact-info .fab {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   line-height: 3rem;
-  padding-left: 2rem;
-  color: #666;
+  padding-left: 1.5rem;
+  color: #aaa;
   cursor: pointer;
   transition: all .3s ease;
 }
 
-.fab:hover{
+.fab:hover {
   transform: scale(1.2);
-  color: #999;
+  color: #fff;
 }
 
-
-@media screen and (max-width: 960px) {
-  .contact-content {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .form-field {
-    width: 100%;
-  }
-  
-  #form-btn {
-    width: 100%;
-  }
-  
-  #form-title {
-    margin: 3rem auto;
-  }
-  
-  .contact-header{
-    margin: 5rem 5rem 3rem 5rem;
-  }
-  
-  #co-title {
-    font-size: 1rem;
-  }
-  
-  #co-text {
-    font-size: 2.5rem;
-  }
-  
-  .contact-form {
-    padding: 2.5rem;
-  }
-}
-
-@media screen and (min-width: 960px) {
-  .form-field {
-    width: 125%;
-  }
-  
-  #form-title {
-    margin: 3rem auto;
-  }
-  
-  #form-btn {
-    width: 125%;
-  }
-  
-  .contact-header{
-    margin: 7rem 7rem 3rem 7rem;
-  }
-  
-  .contact-info {
-    padding: 5rem;
-  }
-  
-  #co-title {
-    font-size: 1rem;
-  }
-  
-  #co-text {
-    font-size: 2.5rem;
-  }
-  
-  .contact-form {
-    padding: 2.5rem;
-  }
-}
-
-@media screen and (min-width: 1460px) {
-  .form-field {
-    width: 200%;
-  }
-  
-  #form-btn {
-    width: 200%;
-  }
-}
 
 /* Footer */
  footer {
@@ -703,18 +717,4 @@ textarea, #message {
   padding: 1rem;
   background-color: #eee;
   font-size: 0.9rem;
-} 
-
-/* Responsive Nav */
-@media (max-width: 600px) {
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 0.5rem;
-    margin-top: 1rem;
-  }
 } 
