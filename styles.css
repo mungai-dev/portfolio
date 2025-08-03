@@ -720,3 +720,113 @@ textarea, #message {
   background-color: #eee;
   font-size: 0.9rem;
 } 
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  .link-group {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .link a {
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 16px;
+    line-height: 40px;
+  }
+
+  .home-section {
+    flex-direction: column;
+    padding: 0 20px;
+    text-align: center;
+    height: auto;
+  }
+
+  .hero-heading {
+    font-size: 40px;
+  }
+
+  .home-img {
+    display: none;
+  }
+
+  .about-section {
+    padding: 100px 20px 0;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline {
+    width: 90%;
+    margin: 80px auto;
+  }
+
+  .card {
+    width: 100%;
+    margin: 50px 0;
+  }
+
+  .card:nth-child(even),
+  .card:nth-child(odd) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .card:before,
+  .card:after,
+  .card:nth-child(even):before,
+  .card:nth-child(even):after,
+  .card:nth-child(odd):before,
+  .card:nth-child(odd):after {
+    display: none;
+  }
+
+  .skills-container {
+    grid-template-columns: 1fr;
+    grid-gap: 40px;
+  }
+
+  .interests-container {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-content {
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .contact-form,
+  .contact-info {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .form-field,
+  #form-btn {
+    width: 100%;
+  }
+
+  .contact-header {
+    margin: 4rem 2rem 2rem;
+  }
+
+  #co-text {
+    font-size: 2rem;
+  }
+
+  .project-container {
+    grid-template-columns: 1fr;
+  }
+
+  .project-img {
+    height: 200px;
+  }
+}
+
