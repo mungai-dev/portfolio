@@ -56,7 +56,7 @@ body{
 } 
 
  section {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 } 
 
 /* home-section */
@@ -67,7 +67,7 @@ body{
     display: flex;
     align-items: center;
     position: relative;
-    margin-top: 60px;
+    margin-top: 20px;
     transition: 1s; 
 }
 
@@ -125,7 +125,7 @@ body{
     font-size: 40px;
     color: #fff;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     letter-spacing: 2px;
 }
 
@@ -180,7 +180,7 @@ body{
 }
 
 .timeline .heading{
-    margin-bottom: 150px;
+    margin-bottom: 60px;
 }
 
 .card{
@@ -281,7 +281,7 @@ body{
 
 /* Interests Section */
 .interests-section {
-  padding: 100px 20px;
+  padding: 10px 10px;
   background-color: #191919;
 }
 
@@ -291,7 +291,7 @@ body{
   color: #fff;
   text-transform: capitalize;
   font-weight: 300;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 }
 
 .interests-container {
@@ -445,7 +445,7 @@ body{
 
 .project-container {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns:repeat(2,1fr) ;
     gap: 40px;
 }
 
@@ -535,23 +535,23 @@ body{
 }
 
 .project-btn.github:hover {
-    background-color: #ccc;
+    background-color: #16da30;
 }
 
 .project-btn.live {
     background: none;
     border: 2px solid #fff;
-    color: #fff;
+    color: #57afe2;
 }
 
 .project-btn.live:hover {
-    background-color: #fff;
+    background-color: #dbe920;
     color: #000;
 }
 
 
  /* contact section */
-@import url('https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:400,700&display=swap');
+/* @import url('https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:400,700&display=swap'); */
 
 .contact {
   display: flex;
@@ -709,7 +709,30 @@ textarea, #message {
 
 .fab:hover {
   transform: scale(1.2);
-  color: #fff;
+}
+
+.contact-links i {
+  color: #0077b5; 
+  font-size: 24px; 
+  transition: color 0.3s ease; 
+}
+
+/* Optional: Different color for each icon */
+.contact-links a:nth-child(1) i {
+  color: #0077b5; /* LinkedIn blue */
+}
+
+.contact-links a:nth-child(2) i {
+  color: #333; /* GitHub dark gray */
+}
+
+.contact-links a:nth-child(3) i {
+  color: #25D366; /* WhatsApp green */
+}
+
+/* Optional: Hover effect */
+.contact-links a:hover i {
+  color: #ff6600; /* Changes icon color when hovered */
 }
 
 
