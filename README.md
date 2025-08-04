@@ -2,7 +2,7 @@
 
 ## 🌐 Project Overview
 
-This project is a responsive, visually appealing, and interactive **personal portfolio website** built using core web technologies: **HTML5**, **CSS3**, and **Font Awesome**, with well-structured sections that showcase my background, skills, interests, and projects. The site is designed to present my profile as a full-stack software developer, make it easy for potential collaborators or employers to understand my experience, and provide direct contact options.
+This project is a responsive, visually appealing, and interactive **personal portfolio website** built using core web technologies: **HTML**  and  **CSS**, with well-structured sections that showcase my background, skills, interests, and projects. The site is designed to present my profile as a full-stack software developer, make it easy for potential collaborators or employers to understand my experience, and provide direct contact options.
 
 ---
 
@@ -12,7 +12,6 @@ This project is a responsive, visually appealing, and interactive **personal por
 |------------------|-------------------------------------------------------------------------|
 | **HTML*        | Used for structuring the content and semantic layout of the website.    |
 | **CSS**         | Powers the visual styling, layout, animations, transitions, and media queries. |
-| **Font Awesome** | Provides consistent and scalable icons for social media and UI elements. |
 | **Responsive Design** | Ensures the site looks great on desktops, tablets, and mobile devices. |
 
 ---
@@ -52,6 +51,7 @@ The site is a **single-page application (SPA)** with smooth scrolling between se
   - Task Manager
   - E-commerce App
   - Online Bookstore
+  -chat app
 - Each card contains project title, description, image, GitHub link, and live preview button.
 
 ### 8. 📬 Contact
